@@ -1,79 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="WDD 231 - Web Frontend Development 1">
+    <title>WDD 231 - Web Fundamentals - Gilda Asadi </title>
     <meta name="author" content="Gilda Asadi">
-    <title>WDD 231 - Web Frontend Development 1 - Gilda Asadi</title>
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
-    <script src="scripts/navigation.js" defer></script>
-    <script src="scripts/date.js" defer></script>
-    <script src="scripts/course.js" defer></script>
+    <meta name="description"content="WDD 231 - Web Frontend Development 1 - Gilda Asadi">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/date.js"></script>
+    <script defer src="scripts/course.js"></script>
+    
     
 </head>
 <body>
     <header>
-        <div class="header_content">
-            <img src="images/profile.jpg" alt="Image of Gilda Asadi" width="85" height="90" tabindex="0"><span tabindex="0">Gilda Asadi</span>
-        </div>
-        <button type="button" id="menu" aria-label="Menu Button" tabindex="0"></button>
+         <div id="image-name">
+             <div class="image-container">
+              <img src="images/profile.jpg" loading="lazy" alt="Image of Gilda Asadi">
+             </div>
+         <span class="name"> Gilda Asadi </span>
+         </div>
+    </header>  
+     <a id="menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/></svg></a>  
+        
         <nav>
-            <ul class="navigation">
-                <li><a href="index.html" id="home" class="active" tabindex="0">Home</a></li>
-                <li><a href="chamber/index.html" id="chamber" tabindex="0">Chamber</a></li>
-                <li><a href="final/index.html" id="final" tabindex="0">Final</a></li>
-                <li><a href="https://github.com/gilda256" id="github_profile" tabindex="0">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/gilda256/" target="_blank" id="linkedin" tabindex="0">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
+        <a id="close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg></a>
+        <ul class="navigation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="./chamber/index.html">Chamber</a></li>
+            <li><a href="https://gilda256.github.io">Github Profile</a></li>
+            <li><a href="https://www.linkedin.com/Gilda256">LinkedIn</a></li>
+        </ul>
+    </nav>
+    
     <main>
-        <h1 tabindex="0">Home</h1>
-        <dialog id="course-details"></dialog>
-        <section id="course_work" tabindex="0">
-            <h2 tabindex="0">Course Work</h2>
-            <ul>
-                <li><a href="#">Dev.to Community</a></li>
-                <li><a href="#">CSS Tricks</a></li>
-                <li><a href="#">W3 Schools</a></li></li>
-            </ul>
-        </section>
-        <section id="us_state_of_interest" tabindex="0">
-            <h2 tabindex="0">Ararat,Armenia</h2>
-            <figure>
-                <picture>
-                    <source srcset="images/armenia.jpg" media="(min-width: 500px)">
-                    <img src="images/armenia.jpg" alt="Ararat mountain in Armenia" width="300" height="300" tabindex="0">
-                </picture>
-                <figcaption tabindex="0">"Ararat mountain in Armenia.</figcaption>
-            </figure>
-        </section>
-        <section id="web_and_computer_programming_certificate" tabindex="0">
-            <h2 tabindex="0">Web and Computer Programming Certificate</h2>
-            <ul id="class_filter_buttons">
-                <li><a href="#class_filter_buttons" title="All" id="all" tabindex="0">All Courses</a></li>
-                <li><a href="#class_filter_buttons" title="WDD" id="wdd" tabindex="0">WDD Courses</a></li>
-                <li><a href="#class_filter_buttons" title="CSE" id="cse" tabindex="0">CSE Courses</a></li>
-            </ul>
-            <hr>
+        <h1>Home</h1>
+        <section class="card">
+            <h2>Course Work</h2>
 
-            <p tabindex="0">The total number of credits required is <span id="total_number_of_credits">6</span></p>
+            <div class="list">
+                <ul>
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                </ul>
+            </div>
+        </section>
 
-            <div id="course_container" tabindex="0">
+        <section class="card">
+            <h2>Ararat, Armenia</h2>
+
+            <div class="location-image-container">
+                <img src="images/armenia.jpg" loading="lazy" alt="Ararat" width="300" height="300">
+                <span class="figcaption">Ararat mountain ,Armenia</span>
+            </div>
+
+
+        </section>
+
+        <section class="card last-card">
+            <h2>Web_and_Computer_Programming_Certificate</h2>
+            <div id="lastCardSectionsContainer">
+                <section id="coursesTabsButton">
+                    <button class="all">All</button>
+                    <button class="cse">CSE</button>
+                    <button class="wdd">WDD</button>
+                </section>
+
+                <section id="coursesTabsContent"></section>
+
+                <section id="coursesTabsCredits"></section>
             </div>
         </section>
     </main>
-    <footer><p tabindex="0">@<span id="currentyear"></span> | Gilda Asadi | Armenia</p>
-        <p id="lastModified" tabindex="0"></p></footer>
+
+
+    <footer>
+        <p>
+            <span id="currentyear">&copy;</span> Gilda Asadi, Armenia
+        </p>
+
+        <p id="lastModified">Last Modification: </p>
+    </footer>
+
 </body>
 </html>

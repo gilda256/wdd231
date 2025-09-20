@@ -1,0 +1,60 @@
+{
+  "companies" : [
+    {
+      "name" : "Allen Gabriel MD",
+      "address" : "703 Broadway Street, Suite 700, WA 98660",
+      "phone_number" : "(360) 869-4200",
+      "website_url" : "www.allengabrielmd.com", 
+      "icon_image" : "images/directory/allen.webp",
+      "membership_level" : "Gold"
+    },
+    {
+      "name" : "Atlas Pacific Security",
+      "address" : "600 SE Assembly Avenue, Ste 100, WA 98661",
+      "phone_number" : "(360) 694-6800",
+      "website_url" : "www.atlaspacificsecurity.com",   
+      "icon_image" : "atlaspacific.png",
+      "membership_level" : "Silver"
+    },
+    {
+      "name" : "Touchmark at Fairway Village",
+      "address" : "2911 SE Village Loop, WA 98683",
+      "phone_number" : "(608) 825-2524",
+      "website_url" : "www.touchmark.com",
+      "icon_image" : "touchmark.webp",
+      "membership_level" : "Silver"
+    },
+    {
+      "name" : "The Convenience Group",
+      "address" : "7107 NE Vancouver Mall Dr, Ste A, WA 98668",
+      "phone_number" : "(360) 892-2878",
+      "website_url" : "www.conveniencegroup.com",   
+      "icon_image" : "convenience.png",
+      "membership_level" : "Gold"
+    },
+    {
+      "name" : "Ferguson Wellman Capital Management",
+      "address" : "1111 Main Street, Suite 100, WA 98660",
+      "phone_number" : "(360) 694-2588",
+      "website_url" : "www.fergusonwellman.com",  
+      "icon_image" : "ferguson.webp",
+      "membership_level" : "Gold"
+    },
+    {
+      "name" : "Harper Houf Peterson Righellis Inc",
+      "address" : "1220 Main Street, Suite 150, WA 98660",
+      "phone_number" : "(360) 750-1131",
+      "website_url" : "www.hhpr.com",  
+      "icon_image" : "hhpr.png",
+      "membership_level" : "Silver"
+    },
+    {
+      "name" : "Humane Society for Southwest Washington",
+      "address" : "1100 NE 192nd Ave, WA 98684",
+      "phone_number" : "(360) 693-4746",
+      "website_url" : "www.southwesthumane.org",   
+      "icon_image" : "hssw.png",
+      "membership_level" : "Silver"
+    }
+  ]
+}

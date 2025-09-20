@@ -76,129 +76,45 @@ const courses = [
         ],
         completed: false
     }
-]
+];
 
-const html = document.querySelector('html');
-const allButton = document.querySelector('#all');
-const cseButton = document.querySelector('#cse');
-const wddButton = document.querySelector('#wdd');
+const coursesTab = document.querySelector('#coursesTabsContent');
+const coursesCredit = document.querySelector('#coursesTabsCredits');
+const displayAllCourses = (array) => {
+    coursesTab.innerHTML = '';
+    array.forEach((course) => { 
+        const courseContainer = document.createElement('div');
+        const courseContent = document.createElement('span');
+        courseContent.innerHTML = `${course.subject} ${course.number}`;
 
-const dialog = document.querySelector("dialog");
-
-allButton.addEventListener('click', () => {
-    generateCourseFigures(courses);
-    calculateAndDisplayTotalNumberOfCreditsRequired(courses);
-});
-
-cseButton.addEventListener('click', () => {
-
-    const cseCourses = courses.filter((course) => course.subject == "CSE");
-
-    generateCourseFigures(cseCourses);
-    calculateAndDisplayTotalNumberOfCreditsRequired(cseCourses);
-});
-
-wddButton.addEventListener('click', () => {
-
-    const wddCourses = courses.filter((course) => course.subject == "WDD");
-
-    generateCourseFigures(wddCourses);
-    calculateAndDisplayTotalNumberOfCreditsRequired(wddCourses);
-});
-
-function conditionalCloseDialog(event) {
-
-    const bondingRect = dialog.getBoundingClientRect();
-
-    if ((event.x < bondingRect.left || event.x > bondingRect.right) || (event.y < bondingRect.top || event.y > bondingRect.bottom)) {
-        dialog.close();
-        html.removeEventListener('click', conditionalCloseDialog, true);
-    }
-}
-
-function displayCourseDetailsModal(course) {
-    html.addEventListener('click', conditionalCloseDialog, true);
-    
-    dialog.innerHTML = "";
-
-    const closeButton = document.createElement("button");
-    closeButton.id = "close-dialog-button";
-    closeButton.textContent = "X";
-
-    closeButton.addEventListener('click', function() {
-        dialog.close();
-    });
-
-    const dialogHeader = document.createElement("h2");
-    dialogHeader.textContent = `${course.subject} ${course.number}`;
-    dialogHeader.appendChild(closeButton);
-
-    const title = document.createElement("h3");
-
-    title.textContent = course.title;
-
-    const p1 = document.createElement("p");
-    const p2 = document.createElement("p");
-    const p3 = document.createElement("p");
-    const p4 = document.createElement("p");
-
-    p1.textContent = `${course.credits} credits`;
-    p2.textContent = `Certtificate: ${course.certificate}`;
-    p3.textContent = course.description;
-    p4.textContent = `Technology: ${course.technology.join(", ")}`;
-
-    dialog.appendChild(dialogHeader);
-    dialog.appendChild(title);
-    dialog.appendChild(p1);
-    dialog.appendChild(p2);
-    dialog.appendChild(p3);
-    dialog.appendChild(p4);
-
-    dialog.showModal();
-
-    // event listener to close the modal when the user clicks outside of the modal.
-
-}
-
-function generateCourseFigures(selectedCourses) {
-    const courseContainerElement = document.querySelector("#course_container");
-
-    courseContainerElement.innerHTML = "";
-
-    for (let i = 0; i < selectedCourses.length; i++) {
-
-        const course = selectedCourses[i];
-        
-        const figure = document.createElement("figure");
-        const figureCaption = document.createElement("figcaption");
-
-        if (course.completed == true) {
-            figure.className = "completed_class";
+        if (course.completed === true) {
+            courseContainer.style.backgroundColor = 'rgb(101, 28, 6)';
+            courseContainer.style.color = 'white';
+        } else {
+            courseContainer.style.backgroundColor = 'lightgrey'
         }
 
-        figure.id = `#course-${course.number}`;
+        courseContainer.appendChild(courseContent);
+        coursesTab.appendChild(courseContainer);
+    });
 
-        figureCaption.textContent = course.title
+    const tc = array.reduce(function (acc, course) {
+        return acc + course.credits;
+    }, 0);
+    coursesCredit.innerHTML = `<span class="credits">Credits required: ${tc}</span>`;
+    // console.log(tc);
+};
 
-        figure.addEventListener('click', function() {
-            displayCourseDetailsModal(course);
-        });
+document.querySelector('.all').addEventListener('click', () => {
+    displayAllCourses(courses);
+});
 
-        figure.appendChild(figureCaption);
+document.querySelector('.cse').addEventListener('click', () => {
+    displayAllCourses(courses.filter(course => course.subject === 'CSE'));
+});
 
-        courseContainerElement.appendChild(figure);
-    }
-}
+document.querySelector('.wdd').addEventListener('click', () => {
+    displayAllCourses(courses.filter(course => course.subject === 'WDD'));
+});
 
-function calculateTotalCredits(total, course) {
-    return total + course.credits;
-}
-
-function calculateAndDisplayTotalNumberOfCreditsRequired(selectedCourses) {
-
-    const totalNumberOfCreditsRequiredElement = document.querySelector("#total_number_of_credits");
-    totalNumberOfCreditsRequiredElement.textContent = ` ${ selectedCourses.reduce(calculateTotalCredits, 0) } `;
-}
-
-generateCourseFigures(courses);
-calculateAndDisplayTotalNumberOfCreditsRequired(courses);
+displayAllCourses(courses);
