@@ -17,28 +17,27 @@ const displayMembers = (members) => {
         section.setAttribute('id', 'section-card');
 
         const logoContainer = document.createElement("div");
-        logoContainer.setAttribute('class', 'logo-container');
+        logoContainer.setAttribute('id', 'logo-container');
         
         const logo = document.createElement("img");
-        logo.setAttribute('src', member.image);
+        logo.setAttribute('src', member.icon_image);
         logo.setAttribute('alt', member.name);
         logo.setAttribute('loading', 'lazy');
 
 
         const companyName = document.createElement("h2");
-        companyName.innerHTML = `${member.name}`;
-        companyName.setAttribute('class', 'h2');
+         companyName.textContent = member.name;
 
         const companyAddress = document.createElement("p");
-        companyAddress.innerHTML = `${member.address}`;
+        companyAddress.textContent = member.address;
 
         const companyPhone = document.createElement("p");
-        companyPhone.innerHTML = `${member.phone}`;
+        companyPhone.textContent = member.phone_number;
 
         const companySite = document.createElement("a");
-        companySite.setAttribute('href', member.url)
+        companySite.setAttribute('href', member.website_url)
         companySite.setAttribute('target', '_blank')
-        companySite.innerHTML = `${member.url}`
+        companySite.textContent = member.website_url;
 
         logoContainer.appendChild(logo);
         section.append(logoContainer, companyName, companyAddress, companyPhone, companySite);
