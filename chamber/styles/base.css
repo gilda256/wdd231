@@ -1,3 +1,4 @@
+
 :root {
     /* change the values below to your colors from your palette */
     --primary-color: #F1FAEE   ;
@@ -16,15 +17,10 @@
     font-family: var(--heading-font);
 }
 
-/* #content{
-    max-width: 1600px;
-    margin: 0 auto
-} */
 
 
 body{
     background-color: var(--primary-color);
-    /* font-size: clamp(1rem, 1.2rem, 3rem); */
 }
 
 
@@ -35,14 +31,14 @@ body{
     position: relative;
     width: 100px;
 }
-/* Hide default HTML checkbox */
+
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -218,7 +214,6 @@ nav {
     opacity: 0;
     transform: translateX(30px);
     transition: 0.5s ease-in-out;
-    /* z-index: -1; */
 }
 
 .heroLink:hover::after {
@@ -250,39 +245,49 @@ main.blog-home-grid{
     margin: 1.5rem auto;
 }
 
+.event-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.event-list li {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.event-list li:last-child {
+    border-bottom: none;
+}
+
 #currentWeatherContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: auto 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
 }
 
 #currentWeatherContainer ul li {
     list-style: none;
-    text-align: left;
+    
 }
 
 #forecast{
     display: grid;
-    text-align: center;
-    margin: 2rem 0;
+    border-radius: 7px;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 2;
 }
 
 #forecast h3{
-    font-size: 28px;
-    margin: 1rem 0 2rem 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-#forecast section{
-    display: flex;
-    align-items: center;
-    padding: 0.5rem;
-}
-
-#forecast section *{
-    margin: 0 1rem;
-}
 
 h4{
     font-family: var(--paragraph-font);
@@ -308,12 +313,18 @@ section.card {
     box-shadow: 5px 5px 10px rgb(92, 92, 92);
 }
 
-  
+
+.card h2 {
+    background-color: var(--accent2-color);
+    color: white;
+    margin: 0;
+    padding: 15px 0;
+}
 .card h2{
     background-color: var(--accent2-color);
-    color: var(--primary-color);
+    color: white;
     margin-top: 0;
-    padding: 20px 0;
+    padding: 15px 0;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 100%;
@@ -339,7 +350,6 @@ section.card {
 }
 
 .card:hover{
-    /* background-color: rgb(255, 255, 255, 8); */
     transform: scale(1.05)
 }
 
@@ -353,10 +363,15 @@ section.card {
     padding: 1.5rem;
 }
 
+
 #forecast h3{
     font-family: var(--paragraph-font);
     color: var(--accent2-color);
 }
+#cardSection .card {
+    background-color: orange;
+    color: black;
+}    
 
 #spotlight{
     position: relative;
@@ -597,7 +612,7 @@ footer {
 .closeCont span {
     cursor: pointer;
 }
- 
+
 /*-------------------------------DIRECTORY---------------------------------*/
 
 
@@ -912,8 +927,7 @@ footer {
         margin: 2rem 0;
     }
 
-    
-    /*-------------------------------DIRECTORY-------------------------------------*/
+        /*-------------------------------DIRECTORY-------------------------------------*/
 
     #directory-main{
         display: block;
