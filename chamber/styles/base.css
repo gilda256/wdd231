@@ -110,7 +110,7 @@ header h1, .h1 {
     margin: auto 0;
 }
 
-.benncima {
+.benn {
     display: block;
     text-align: justify;
     letter-spacing: 1px;
@@ -313,13 +313,6 @@ section.card {
     box-shadow: 5px 5px 10px rgb(92, 92, 92);
 }
 
-
-.card h2 {
-    background-color: var(--accent2-color);
-    color: white;
-    margin: 0;
-    padding: 15px 0;
-}
 .card h2{
     background-color: var(--accent2-color);
     color: white;
@@ -612,6 +605,339 @@ footer {
 .closeCont span {
     cursor: pointer;
 }
+/*---------------------------  FORMS -----------------------------*/
+:root{
+    --text-color: "black";
+    --required-color: rgb(166, 7, 7);
+    --valid-color: rgb(4, 110, 4);
+}
+
+#main{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.dark-mode #main{
+    background-color: #000000;
+}
+
+#main h1{
+    text-align: left;
+    margin: 3px;
+}
+
+.wf1, #right-side{
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    width: 80%;
+}
+
+.wf1 fieldset{
+    margin: 2rem 0;
+    border: 1px solid #878282;
+    border-radius: 6px;
+    padding: 1rem 2%;
+}
+
+.wf1 fieldset:nth-of-type(3)
+{
+    padding-bottom: 2rem;
+}
+
+.wf1 legend{
+    font-size: 1.5rem;
+    color: var(--required-color);
+    padding:0 .5rem;
+}
+
+.wf1 span{
+    color: #a60606;
+}
+
+.dark-mode .wf1 legend, 
+.dark-mode #right-side span,
+.dark-mode .wf1 span{
+    color: pink;
+}
+
+
+.wf1 label, .r{
+    display: block;
+    padding: 1rem;
+}
+
+.dark-mode .wf1 label{
+    color: white;
+}
+
+input {
+    accent-color: rgb(255, 111, 0)
+    ;
+}
+
+
+.wf1 input[type="text"],
+.wf1 input[type="tel"],
+.wf1 input[type="email"],
+.wf1 input[type="hidden"] 
+{
+    background-color: #eee;
+    display: block;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 350px;
+    appearance: none;
+}
+
+textarea{
+    display: block;
+    background-color: #eee;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #000000;
+    max-height: 150px;
+
+}
+
+.wf1 input[type="radio"]{
+    margin: 6px;
+}
+
+#pwd::placeholder {
+    font-size: 13px;
+}
+
+.incorrect #repeated_pwd{
+    background-color: rgba(255, 0, 0, 0.1); 
+}
+
+.memInfo{
+    color: #1a3281;
+    font-size: 1.3rem;
+    margin:  .5rem;
+}
+
+.dark-mode .memInfo{
+    color: #aad5f8;
+}
+
+.wf1 input:required{
+    border-right: 5px solid;
+    border-right-color: var(--required-color);
+}
+
+.wf1 input:not(:nth-of-type(3)):required:valid{
+    border-right: 5px solid;
+    border-right-color: var(--valid-color);
+}
+
+.wf1 input[type="submit"]{
+    background-image: linear-gradient(var(--required-color), #6f200e);
+    border: none;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #eee;
+    width: 60%;
+    max-width: 350px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.button{
+    display: block;
+    margin: -1rem 0 2rem 1rem;
+    padding: 1rem;
+    font-size: 1.3em;
+}
+
+#right-side section{
+    position: relative;
+    background-color: rgb(219, 219, 219);
+    border-radius: 6px;
+    margin: 2rem 0;
+    padding: 1rem;
+    font-size: larger;
+    border: 1px solid #848383;
+    animation: slideIn 1s ease-in-out forwards;
+    opacity: 0;
+    height: auto;
+}
+
+
+@keyframes slideIn {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+#right-side section span{
+    color: rgb(174, 11, 11);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 1rem 3px;
+}
+
+#right-side .firsthr{
+    border: 1px solid black;
+    width: 90%;
+    margin-bottom: 1.5rem;
+}
+
+#right-side h1{
+    display: block;
+    text-align: center;
+}
+
+#right-side ul.list li{
+    list-style-type: none;
+    margin: 2rem 0;
+    padding: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    font-weight: 100;
+    color: rgb(75, 75, 75);
+    border: 3px solid black;
+    border-radius: 20px;
+    letter-spacing: -1px;
+}
+
+#right-side a{
+    margin: 2rem auto 1rem auto;
+    display: block;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: orange;
+    padding: .8rem 0;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+}
+
+#right-side a:hover {
+    background-color: rgb(255, 140, 0);
+    padding-right: 15px;
+}
+
+#right-side a::after {
+    position: absolute;
+    content: "\25BC";
+    padding-left: 5px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+#right-side a:hover::after {
+    opacity: 1;
+}
+
+dialog.modal {
+    border: 1px solid rgb(0 0 0 / 0.1);
+    border-radius: .25rem;
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem #777;
+    width: 80ch;
+    border: none;
+    text-align: center;
+    margin: auto;
+    animation: show .5s ease-in-out forwards;
+}
+
+@keyframes show {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+  
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.closeButton {
+    margin: 3rem auto 0 auto;
+    display: block;
+    width: 30%;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: orange;
+    padding: .8rem 0;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 500;
+    transition: .3s ease-in-out;
+}
+
+.closeButton::after {
+    position: absolute;
+    content: "\25B2";
+    padding-left: 5px;
+}
+
+.closeButton:hover {
+    background-color: rgb(255, 140, 0);
+}
+
+/*--------------------THANK YOU.HTML---------------------*/
+#record-main{
+    height: auto;
+    text-align: center;
+    max-width: 70vw;
+    margin: 5rem auto;
+}
+
+.recordmsg * {
+    margin: 1.5rem 0;
+}
+
+.recordmsg{
+    font-size: 30px;
+    font-weight: 700;
+    padding: 1rem;
+    border-bottom: 3px solid rgb(255, 119, 0);
+}
+
+.recordmsg p {
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    font-weight: 300;
+}
+
+.applicantInfo {
+    margin: 2rem auto;
+}
+
+.applicantInfo p {
+    margin: .5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: -1px;
+    font-style: italic;
+    text-align: left;
+    font-weight: 100;
+    color: #444444;
+    font-size: 1.2rem;
+}
+
+
 
 /*-------------------------------DIRECTORY---------------------------------*/
 
@@ -926,8 +1252,74 @@ footer {
     .right-sidebar{
         margin: 2rem 0;
     }
+     /*------------------------FORMS-------------------------*/
+    .wf1{
+        display: block;
+        text-align: left;
+        width: 90%;
+        font-size: 15px;
+    }
+    
+    .wf1 input[type="text"],
+    .wf1 input[type="tel"],
+    .wf1 input[type="email"]
+    {
+        background-color: #eee;
+        display: block;
+        border: 1px solid #999;
+        border-radius: 6px;
+        padding: .75rem;
+        color: #555;
+        width: 100%;
+        max-width: 300px;
+        appearance: none;
+    }
 
-        /*-------------------------------DIRECTORY-------------------------------------*/
+    .wf1 input:required{
+        border-right: 5px solid;
+        border-right-color: var(--required-color);
+    }
+    
+    .wf1 input:not(:nth-of-type(3)):required:valid{
+        border-right: 5px solid;
+        border-right-color: var(--valid-color);
+    }
+
+    textarea{
+        width: 300px;
+    }
+
+    
+    #right-side{
+        width: 90%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #right-side section{
+        width: 90%;
+        border-radius: 6px;
+        margin: 2rem 1rem;
+        padding: 1rem;
+        font-size: calc(100% - .3rem);
+    }
+  
+    ul.list li{
+        /* display: inline-block; */
+        text-align: left;
+        padding: 5px;
+        line-height: 1.5;
+        margin: auto;
+        word-break: keep-all;
+    }
+
+    .closeButton {
+        font-size: calc(100% / 1.2);
+    }
+
+    /*-------------------------------DIRECTORY-------------------------------------*/
 
     #directory-main{
         display: block;
