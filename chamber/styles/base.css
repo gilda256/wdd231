@@ -1,12 +1,10 @@
 
 :root {
-    /* change the values below to your colors from your palette */
     --primary-color: #F1FAEE   ;
     --secondary-color: #457B9D;
     --accent1-color: #A8DADC;
     --accent2-color: #132339;
   
-    /* change the values below to your chosen font(s) */
     --heading-font: "Roboto";
   }
   
@@ -16,8 +14,6 @@
     box-sizing: border-box;
     font-family: var(--heading-font);
 }
-
-
 
 body{
     background-color: var(--primary-color);
@@ -561,7 +557,7 @@ footer {
 }
   .cards button { 
     grid-area: button; 
-    background: #007bff; 
+    background: #022b57; 
     color: white; 
     border: none; 
     border-radius: 5px; 
