@@ -7,7 +7,7 @@ async function getData() {
   
 async function buildCards() {
     const allData =  await getData();
-    const container = document.getElementById('place-container');
+    const container = document.getElementById('rivers-container');
     allData.forEach(attraction => {
       const cards = document.createElement('div');
       cards.className = 'cards';
